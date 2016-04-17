@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         if (id == R.id.action_settings) {
             //intent to call settings activity
             startActivity(new Intent(this, SettingsActivity.class));
-            return true;
+            return false;
         }
 
         return super.onOptionsItemSelected(item);
