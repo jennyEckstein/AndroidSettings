@@ -21,6 +21,7 @@ public class MainActivityFragment extends Fragment {
     private SharedPreferences sharedPreferences;
     private View view;
     private TextView checkBoxTextView;
+    private TextView editTextTextView;
 
     public MainActivityFragment() {
     }
@@ -37,7 +38,8 @@ public class MainActivityFragment extends Fragment {
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 
         this.view = inflater.inflate(R.layout.fragment_main, container, false);
-        checkBoxTextView = (TextView) view.findViewById(R.id.checkBoxSetting);
+        this.checkBoxTextView = (TextView) view.findViewById(R.id.checkBoxSetting);
+        this.editTextTextView = (TextView) view.findViewById(R.id.editTextSetting);
         setLayoutText();
         return view;
     }
@@ -67,13 +69,21 @@ public class MainActivityFragment extends Fragment {
     }
 
     private void setLayoutText(){
+        //checkbox
         String checkBoxValueActual = getString(R.string.pref_checkbox_key);
         String checkBoxValueDefault = getString(R.string.pref_checkbox_default);
+        //editText
+        String editTextValueActual = getString(R.string.pref_EditText_key);
+        String editTextValueDefault = getString(R.string.pref_checkbox_default);
+
         Boolean checkBoxValue =
                 sharedPreferences.getBoolean(checkBoxValueActual, Boolean.valueOf(checkBoxValueDefault));
+        String editTextValue =
+                sharedPreferences.getString(editTextValueActual, editTextValueDefault);
 
         //Log.v(LOG_TAG, "setLayoutText " + checkBoxValue.toString());
         checkBoxTextView.setText(checkBoxValue.toString());
+        editTextTextView.setText(editTextValue);
     }
 }
 

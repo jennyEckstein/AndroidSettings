@@ -15,4 +15,11 @@
         android:id="@+id/checkBoxSetting"
         tools:text="Check Box" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextSetting"
+        android:layout_below="@+id/checkBoxSetting"
+        tools:text="Edit Text" />
+
 </RelativeLayout>

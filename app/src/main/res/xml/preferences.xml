@@ -5,4 +5,9 @@
         android:title="@string/pref_checkbox_title"
         android:defaultValue="@string/pref_checkbox_default"
         />
+    <EditTextPreference
+        android:key="@string/pref_EditText_key"
+        android:title="@string/pref_EditText_title"
+        android:defaultValue="@string/pref_EditText_default"
+        />
 </PreferenceScreen>

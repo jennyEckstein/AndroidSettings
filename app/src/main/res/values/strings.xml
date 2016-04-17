@@ -6,6 +6,12 @@
     <string name="pref_checkbox_title">Check Box</string>
     <string name="pref_checkbox_key" translatable="false">pref_checkbox</string>
     <string name="pref_checkbox_default" translatable="false">true</string>
+
+    <!--EditText Preference -->
+    <string name="pref_EditText_title">Edit Text</string>
+    <string name="pref_EditText_key" translatable="false">pref_editText</string>
+    <string name="pref_EditText_default" translatable="false">No value</string>
+
     <string name="title_activity_settings">SettingsActivity</string>
 
 </resources>
