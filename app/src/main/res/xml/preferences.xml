@@ -10,4 +10,11 @@
         android:title="@string/pref_EditText_title"
         android:defaultValue="@string/pref_EditText_default"
         />
+    <ListPreference
+        android:key="@string/pref_ListPref_key"
+        android:title="@string/pref_ListPref_title"
+        android:defaultValue="@string/pref_ListPref_default"
+        android:entries="@array/listPref_entries"
+        android:entryValues="@array/listPref_values"
+        />
 </PreferenceScreen>

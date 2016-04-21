@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listPref_entries">
+        <item>@string/listOption_yes</item>
+        <item>@string/listOption_no</item>
+    </string-array>
+
+    <string-array name="listPref_values">
+        <item>@string/listValue_yes</item>
+        <item>@string/listValue_no</item>
+    </string-array>
+</resources>

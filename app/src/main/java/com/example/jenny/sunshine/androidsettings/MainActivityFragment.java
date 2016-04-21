@@ -22,6 +22,7 @@ public class MainActivityFragment extends Fragment {
     private View view;
     private TextView checkBoxTextView;
     private TextView editTextTextView;
+    private TextView listOptionTextView;
 
     public MainActivityFragment() {
     }
@@ -40,6 +41,7 @@ public class MainActivityFragment extends Fragment {
         this.view = inflater.inflate(R.layout.fragment_main, container, false);
         this.checkBoxTextView = (TextView) view.findViewById(R.id.checkBoxSetting);
         this.editTextTextView = (TextView) view.findViewById(R.id.editTextSetting);
+        this.listOptionTextView = (TextView) view.findViewById(R.id.listOptionSetting);
         setLayoutText();
         return view;
     }
@@ -74,16 +76,23 @@ public class MainActivityFragment extends Fragment {
         String checkBoxValueDefault = getString(R.string.pref_checkbox_default);
         //editText
         String editTextValueActual = getString(R.string.pref_EditText_key);
-        String editTextValueDefault = getString(R.string.pref_checkbox_default);
+        String editTextValueDefault = getString(R.string.pref_EditText_default);
+        //listOption
+        String listOptionActual = getString(R.string.pref_ListPref_key);
+        String listOptionDefaul = getString(R.string.pref_ListPref_default);
 
         Boolean checkBoxValue =
                 sharedPreferences.getBoolean(checkBoxValueActual, Boolean.valueOf(checkBoxValueDefault));
         String editTextValue =
                 sharedPreferences.getString(editTextValueActual, editTextValueDefault);
+        String listOptionValue =
+                sharedPreferences.getString(listOptionActual, listOptionDefaul);
 
         //Log.v(LOG_TAG, "setLayoutText " + checkBoxValue.toString());
         checkBoxTextView.setText(checkBoxValue.toString());
         editTextTextView.setText(editTextValue);
+        listOptionTextView.setText(listOptionValue);
+
     }
 }
 

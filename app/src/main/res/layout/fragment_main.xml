@@ -22,4 +22,11 @@
         android:layout_below="@+id/checkBoxSetting"
         tools:text="Edit Text" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listOptionSetting"
+        android:layout_below="@+id/editTextSetting"
+        tools:text="List Option" />
+
 </RelativeLayout>
